@@ -9,7 +9,7 @@ def test_start_if():
         выполняеться следующий блок кода
     """
     a = 0  # Учимся объявлять все переменные вначале функции 
-    if ____:  # попробуйте такие варианты: TRUE, true, True
+    if True:  # попробуйте такие варианты: TRUE, true, True
         a = 3
     assert a == 3
 
@@ -19,11 +19,12 @@ def test_if_and_else():
         Использование конструкции if и else
     """
     a = None
-    if ____:  # попробуйте такие варианты: FALSE, false, False
+    if False:  # попробуйте такие варианты: FALSE, false, False
         a = 0
     else:
         a = 1
     assert a == 1
+    # не врубился как python связывает переменную и последующий блок if 
 
 
 def test_not_in_if():
@@ -34,7 +35,7 @@ def test_not_in_if():
         или истиное в ложное
     """
     a = "" 
-    if not ____:
+    if not False:
         a = True
     else:
         a = False
@@ -49,7 +50,7 @@ def test_two_if():
     a = 0
     if a == 0:
         a = 1 
-    if a != ____:
+    if a != 0:
         a = 42
     assert a == 42
 
@@ -61,7 +62,7 @@ def test_elif():
     a = 0
     if a != 0:
         a = 1 
-    elif ____:
+    elif a == 0:
         a = 42
     assert a == 42
 
@@ -71,9 +72,9 @@ def test_elif_and_else():
         Исследуем работу else 
         необходимо заполнить условия возле if и elif чтобы сработал else
     """
-    if (3 > 2) == ____:
+    if (3 > 2) == False:
         a = None
-    elif 3 > 2 == ____:
+    elif 3 > 2 == False:
         a = None
     else:
         a = True
@@ -86,5 +87,5 @@ def test_logic():
     """
     names = ['Вова', 'Леша', 'Лена', 'Света']
     name = "Вова"
-    if __ in __:
+    if name in names:
         assert True
